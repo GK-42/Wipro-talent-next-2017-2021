@@ -1,0 +1,29 @@
+package duplicate_string;
+import java.util.Scanner;
+
+public class Duplicate_string {
+	public static void main(String[] args)
+	{
+		System.out.println("enter the string: ");
+		Scanner s= new Scanner(System.in);
+		String str = s.nextLine();
+		System.out.println("The string without duplicate char is: " + removed(str));
+	
+	}
+	private static String removed(String sourceStr)
+	{
+		char[] arr1= sourceStr.toCharArray();
+		String targetstr="";
+		for(char value:arr1)
+		{
+			if(targetstr.indexOf(value) == -1)
+			{
+				targetstr+=value;
+			}
+		}
+		return targetstr;
+	}
+
+	
+	
+}
